@@ -1,0 +1,36 @@
+@mixin burger ($background: #000) {
+    width: 35px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    & > span,
+    &::before {
+        margin-bottom: 7px;
+    }
+
+    & > span,
+    &::before,
+    &::after {
+        content: '';
+        display: block;
+        height: 3px;
+        background-color: #{$background};
+        border-radius: 3px;
+        transition: all .2s ease-in-out;
+    }
+
+    &_active {
+        & > span {
+            transform: scale(0);
+        }
+
+        &::before {
+            transform: translateY(12px) rotate(135deg);
+        }
+
+        &::after {
+            transform: translateY(-8px) rotate(-135deg);
+        }
+    }
+}

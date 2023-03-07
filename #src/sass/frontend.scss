@@ -1,0 +1,10 @@
+@import 'variables'; // vars
+@import 'vendor'; // include all vendors
+@import 'mixins'; // include all mixins
+@import 'fonts'; // fonts, icons
+@import 'settings'; // global styles
+
+// Components All
+@import 'components/header'; // <header/>
+@import 'components/main'; // <main/>
+@import 'components/footer'; // <footer/>

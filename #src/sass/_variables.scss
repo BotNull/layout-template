@@ -1,0 +1,15 @@
+:root {
+    // Colors
+    --color-white: #fff;
+    --color-black: #000;
+
+    // Настройки body
+    --font-family: ''; // Шрифт
+    --font-size: 16px; // Размер шрифта по умолчанию
+    --font-weight: 400; // Насыщенность шрифта по умолчанию
+
+    // Настройки контейнера
+    --max-width: 1170px; // Макисмальная ширина контейнера
+    --container-padding: 15px; // Внутренние отступы (left, right)
+    --container-width: calc(var(--max-width, 1170px) + (var(--container-padding, 0px) * 2)); // Ширина срабатывание первого Breakpoint`а
+}
