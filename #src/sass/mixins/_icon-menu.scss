@@ -1,0 +1,57 @@
+@mixin menu-icon (
+    $width: 20px,
+    $height: 20px, 
+    $line_h: 2px, 
+    $color: #222
+) {
+    & {
+        position: relative;
+        width: $width;
+        height: $height;
+        background-color: transparent;
+        border: none;
+
+        span,
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: $line_h;
+            background-color: #{$color};
+            transition: transform .2s;
+        }
+
+        & > span {
+            transform: translateY(-50%);
+        }
+
+        &::before {
+            top: 0;
+        }
+
+        &::after {
+            bottom: 0;
+        }
+
+        &_active {
+            & > span {
+                height: 0;
+            }
+
+            &::before,
+            &::after {
+                top: 50%;
+            }
+
+            &::before {
+                transform: rotate(45deg);
+            }
+
+            &::after {
+                transform: rotate(-45deg);
+            }
+        }
+    }
+}

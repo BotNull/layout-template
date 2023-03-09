@@ -1,0 +1,13 @@
+@mixin hover {
+    @media (any-hover: hover) {
+        &:hover {
+            @content;
+        }
+    }
+}
+
+@mixin margin($position, $value) {
+    &:not(:last-child) {
+        margin-#{$position}: $value;
+    }
+}
