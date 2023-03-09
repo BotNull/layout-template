@@ -11,7 +11,7 @@
         background-color: transparent;
         border: none;
 
-        & > span,
+        span,
         &::before,
         &::after {
             content: '';
@@ -23,7 +23,7 @@
             transition: transform .2s;
         }
 
-        & > span {
+        span {
             transform: translateY(-50%);
         }
 
